@@ -65,6 +65,23 @@ client.on('message', message => {
 	}
 });
 
+//Auto add a role everytime someone joins an voice chat
+//This function will trigger every time their is a update with a user in an Voice channel
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    console.log(`Voice state changed for an user`)
+    //Define status
+	let oldUserChannel = oldMember.voiceChannel;
+    let newUserChannel = newMember.voiceChannel;
+	if (oldUserChannel === undefined) {
+        console.log('Joined Voice Channel')
+	} else if (newUserChannel === undefined) {
+		console.log('Left Voice Channel');
+	} else if (oldUserChannel !== undefined && newUserChannel !== undefined) {
+		console.log('Moved Voice channel');
+	}
+
+});
+
 //Log errors to the webhook
 client.on("error",(e) => {
 //	Hook.error(client.user.username, e);
