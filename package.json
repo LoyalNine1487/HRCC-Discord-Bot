@@ -1,0 +1,24 @@
+{
+  "name": "hrcc-discord-bot",
+  "version": "1.0.0",
+  "description": "Discord bot built in node.js with Discord.js for the Ham Radio Crash Course",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "webhook-discord": "^3.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoyalNine1487/HRCC-Discord-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoyalNine1487/HRCC-Discord-Bot/issues"
+  },
+  "homepage": "https://github.com/LoyalNine1487/HRCC-Discord-Bot#readme"
+}
