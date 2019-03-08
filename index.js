@@ -11,11 +11,11 @@ client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands');
 
 //set playing
-var playing = `Say -commands`;
+var playing = `Say -help for commands`;
 
 //Start the webhook
-const Webhook = require("webhook-discord");
-const Hook = new Webhook(webhook);
+//const Webhook = require("webhook-discord");
+//const Hook = new Webhook(webhook);
 
 //date and time setup
 var date = new Date();
@@ -33,7 +33,7 @@ client.on('ready', () => {
   console.log('The curent time in 24 hour is  ' + hour);
   console.log(`Ready to begin! Shard serving in ${client.guilds.size} servers`);
   client.user.setGame(playing);
-  Hook.success(client.user.username,`Ready to begin!`);
+//  Hook.success(client.user.username,`Ready to begin!`);
 });
 
 //Look at messages to see if their is a command
@@ -56,7 +56,7 @@ client.on('message', message => {
 		//Log command
 		console.log(command);
 		//send command to webhook for real time logging
-		Hook.info(client.user.username, `${message.author.username} executed ${message.cleanContent} in ${message.guild.channel}`);
+//		Hook.info(client.user.username, `${message.author.username} executed ${message.cleanContent} in ${message.guild.channel}`);
 	}
 	catch (error) {
 		console.error(error);
